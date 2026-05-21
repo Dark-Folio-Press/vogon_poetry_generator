@@ -1,0 +1,55 @@
+
+From https://github.com/Dark-Folio-Press/vogon_poetry_generator
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+~/workspace$ git log --oneline -10
+git log --oneline origin/main -10
+git push origin HEAD
+b1db777 (HEAD -> main, gitsafe-backup/main) Fix SEO meta description tag in public/index.html
+06f0182 Transitioned from Plan to Build mode
+ce75d3c Published your App
+dc503b5 Published your App
+e3f49c2 Published your App
+a5f777f Published your App
+9a7c192 Published your App
+391145d Saved progress at the end of the loop
+35306d7 Update server to run on port 5000 and remove unused code
+3bc807a (grafted, origin/main, origin/HEAD) beautified background added logo
+3bc807a (grafted, origin/main, origin/HEAD) beautified background added logo
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (24/24), 3.61 KiB | 3.61 MiB/s, done.
+Total 24 (delta 18), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (18/18), completed with 3 local objects.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.
+remote:      Visit the repository settings page, https://github.com/Dark-Folio-Press/vogon_poetry_generator/settings/security_analysis
+remote:     
+remote:     
+remote:       —— OpenAI API Key ————————————————————————————————————
+remote:        locations:
+remote:          - commit: a5f777f71cd78eb46eb1447e6bd2d136aba49998
+remote:            path: .replit:44
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dark-Folio-Press/vogon_poetry_generator/security/secret-scanning/unblock-secret/3E2mogW1dDhsCDuYcBGZtEpd0pj
+remote:     
+remote: 
+remote: 
+To https://github.com/Dark-Folio-Press/vogon_poetry_generator
+ ! [remote rejected] HEAD -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/Dark-Folio-Press/vogon_poetry_generator'
+~/workspace$ 
