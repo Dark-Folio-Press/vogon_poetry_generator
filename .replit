@@ -41,4 +41,3 @@ run = ["npm", "start"]
 [userenv]
 
 [userenv.shared]
-OENAI_API_KEY = "***REMOVED***"
