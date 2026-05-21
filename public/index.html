@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vogon Poetry Generator — Galactic Hyperspace Planning Council</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="header">
+      <span class="seal">🛸</span>
+      <h1>Vogon Poetry Generator</h1>
+      <p class="subtitle">Galactic Hyperspace Planning Council — Cultural Dissemination Division</p>
+    </div>
+
+    <div class="warning-banner">
+      ⚠ WARNING: The poetry produced by this terminal has been classified as hazardous to sentient beings
+      under Galactic Statute 9,432,847-B (Aesthetically Dangerous Verse, Class III). Continued exposure
+      may result in mild despair, bureaucratic resignation, or an inexplicable desire to file Form 27B/6.
+    </div>
+
+    <div class="card">
+      <label for="subject">Subject of poetic suffering</label>
+      <div class="severity-control">
+
+    <label for="severity">
+        Vogonic Severity
+    </label>
+
+    <input
+        type="range"
+        id="severity"
+        min="1"
+        max="10"
+        value="5"
+    />
+
+    <div class="severity-labels">
+        <span>Mildly Unpleasant</span>
+        <span>Prostetnic Tier</span>
+    </div>
+
+</div>
+      <div class="input-row">
+        <input
+          type="text"
+          id="subject"
+          placeholder="e.g. a parking ticket, unrequited love, the weather…"
+          maxlength="200"
+        />
+        <button class="generate-btn" id="generate-btn" onclick="generatePoem()">
+          Compose
+        </button>
+      </div>
+      <div class="suggestions">
+        <span>Try:</span>
+        <button onclick="setSubject('a cup of cold tea')">cold tea</button>
+        <button onclick="setSubject('Mondays')">Mondays</button>
+        <button onclick="setSubject('the infinite loneliness of bureaucratic forms')">bureaucracy</button>
+        <button onclick="setSubject('my cat ignoring me')">my cat</button>
+        <button onclick="setSubject('the heat death of the universe')">heat death</button>
+        <button onclick="setSubject('a traffic jam')">traffic</button>
+      </div>
+    </div>
+
+    <div class="output-card" id="output-card">
+      <div class="output-header">
+        <div class="status">
+          <div class="pulsedot" id="pulsedot"></div>
+          <span id="status-label">Composing…</span>
+        </div>
+        <button class="copy-btn hidden" id="copy-btn" onclick="copyPoem()">Copy</button>
+      </div>
+      <div class="poem-text" id="poem-text"></div>
+    </div>
+
+    <div class="footer">
+
+  <div class="darkfolio-footer">
+
+    <a
+      href="https://darkfoliopress.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="darkfolio-link"
+    >
+
+      <img
+        src="/images/lightning_hawk.jpg"
+        alt="Dark Folio Labs"
+        class="darkfolio-logo"
+      />
+
+      <div class="darkfolio-text">
+        A Dark Folio Labs Experiment
+      </div>
+
+    </a>
+
+  </div>
+
+  <p>
+    This device has been approved under
+    Form GHPC-8834/Q
+    (Automated Aesthetic Suffering, Approved)
+  </p>
+
+</div>
+
+  <script src="/scripts/app.js"></script>
+</body>
+</html>
