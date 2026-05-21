@@ -19,7 +19,7 @@ const scorePoem =
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -75,18 +75,6 @@ app.post('/poem', async (req, res) => {
 
     await streamResponse(res,poem);
 
-    for (const word of words) {
-      res.write(
-        `data: ${JSON.stringify({
-          text: word + ' '
-        })}\n\n`
-      );
-
-      await new Promise(resolve =>
-        setTimeout(resolve, 35)
-      );
-    }
-
     res.write(
       `data: ${JSON.stringify({
         score: vogonEvaluation.score,
@@ -116,7 +104,7 @@ classification:
   }
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(
     `Vogon Poetry Generator running on http://localhost:${port}`
   );
